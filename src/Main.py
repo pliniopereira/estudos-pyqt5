@@ -16,12 +16,15 @@ import sys
 from PyQt5.QtWidgets import QApplication, QWidget
 
 if __name__ == '__main__':
-    app = QApplication(sys.argv)
+    try:
+        app = QApplication(sys.argv)
 
-    window = QWidget()
-    window.resize(250, 150)
-    window.move(300, 300)
-    window.setWindowTitle('Simple')
-    window.show()
+        window = QWidget()
+        window.resize(500, 500)
+        window.setWindowTitle('CCD3')
+        window.show()
 
-    sys.exit(app.exec_())
+        sys.exit(app.exec_())
+
+    except Exception as e:
+        print(e)
